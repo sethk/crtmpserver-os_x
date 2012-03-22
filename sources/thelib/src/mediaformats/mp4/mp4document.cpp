@@ -577,7 +577,7 @@ bool MP4Document::BuildMOOVFrames(bool audio) {
 					compositionOffsets.size());
 		}
 	}
-	INFO("audio: %hhu; keyFrames: %"PRIz"u; frames: %"PRIz"u; compositionOffsets: %"PRIz"u",
+	INFO("audio: %d; keyFrames: %"PRIz"u; frames: %"PRIz"u; compositionOffsets: %"PRIz"u",
 			audio, keyFrames.size(), sampleSize.size(), compositionOffsets.size());
 
 	uint32_t timeScale = pMDHD->GetTimeScale();

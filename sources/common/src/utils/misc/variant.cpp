@@ -361,7 +361,7 @@ string Variant::ToString(string name, uint32_t indent) {
 		}
 		default:
 		{
-			FATAL("Invalid type: %hhu", _type);
+			FATAL("Invalid type: %d", _type);
 			assert(false);
 		}
 	}
@@ -1316,7 +1316,7 @@ bool Variant::SerializeToBin(string &result) {
 		default:
 		{
 			result = "";
-			FATAL("Invalid variant type: %hhu", _type);
+			FATAL("Invalid variant type: %d", _type);
 			return false;
 		}
 	}
@@ -1648,7 +1648,7 @@ bool Variant::SerializeToJSON(string &result) {
 		}
 		default:
 		{
-			ASSERT("Invalid type %hhu", _type);
+			ASSERT("Invalid type %d", _type);
 			break;
 		}
 	}
@@ -1808,7 +1808,7 @@ TiXmlElement *Variant::SerializeToXmlElement(string &name) {
 		}
 		default:
 		{
-			ASSERT("Invalid type: %hhu", _type);
+			ASSERT("Invalid type: %d", _type);
 			return NULL;
 		}
 	}
@@ -2005,7 +2005,7 @@ bool Variant::DeserializeFromBin(uint8_t *pBuffer, uint32_t bufferSize,
 		}
 		default:
 		{
-			FATAL("Invalid variant type: %hhu", type);
+			FATAL("Invalid variant type: %d", type);
 			return false;
 		}
 	}
