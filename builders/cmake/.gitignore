@@ -1,0 +1,8 @@
+Makefile
+CMakefiles
+*.cmake
+CMakeCache.txt
+*.dylib
+precompiled.gch
+crtmpserver/crtmpserver
+tests/tests
